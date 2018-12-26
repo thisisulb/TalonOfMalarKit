@@ -64,10 +64,10 @@ Abilities:
 This spell enables the caster to turn his hands into beast-like claws, which deal 1d4 slashing damage.
 For the duration of the spell (1 turn +1 turn/5 levels, up to a maximum of 4 turns at level 15), the caster gains 1 additional attack per round.
 As to for what they can hit, the claws are considered to be magical weapons +0 from level 1-9, +1 from level 10-14 and +2 from level 15 onward.
--From level 5 can use the Tracking ability once per day
--From level 10 can use the Hunter's Rage ability once per day
+-At level 5 can use the Tracking ability once per day
+-At level 10 can use the Hunter's Rage ability once per day
 Hunter's Rage lasts 5 rounds. For the duration of the effect, the caster becomes immune to fear and moral break and gains +2 THAC0 and deals additional 2 damage with each hit. However, enrage also gives a 2 point penalty to armor class and saving throws as well as a 33 percent chance to fail at spell casting.
-- From level 13 gains 1 additional attack per round~
+-At level 13 gains 1 additional attack per round~
 
 // Copy stuff over to override
 
