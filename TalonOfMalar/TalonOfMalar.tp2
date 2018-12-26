@@ -1,0 +1,178 @@
+BACKUP ~TalonOfMalar/backup~ // So WeiDU can uninstall
+AUTHOR ~ulb~ // Contact address displayed if installation fails
+// README ~TalonOfMalar/README_TalonOfMalar.pdf~ // Shows readme file
+
+BEGIN ~Talon of Malar~
+
+// Internal name of the kit
+ADD_KIT ~UBtln~
+
+  // Appended to CLASWEAP.2da
+  ~UBtln                0           0           1           0           0           1           0           0~
+
+  // Appended column-wise to WEAPPROF.2da
+  ~UBtln 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+     
+  // Appended to ABCLASRQ.2da
+  ~UBtln                13      0      0      0       12       0~
+
+  // Appended to ABCLSMOD.2da
+  ~UBtln                0       0       0      0       0       0~
+
+  // Appended to ABDCDSRQ.2da
+  ~UBtln                0      0        0      0       0       0~
+
+  // Appended to ABDCSCRQ.2da
+  ~UBtln                0      0     0       0       15       0~
+
+  // Appended to ALIGNMNT.2da
+  ~UBtln                0       0       0       0       0       1       0      1       1~
+
+  // Appended to DUALCLAS.2da
+  ~UBtln                1       0       1       1       0       1~
+
+  // Path to my CLAB.2da file 
+  ~TalonOfMalar/files/UBTLN00.2da~
+
+  // PC races and classes allowed to use this kit, from KITTABLE.2da
+  ~K_C_H K_C_D K_C_HL K_C_G K_C_HO K_C_E K_C_HE~
+
+  // Usability flags, added to the end of the KITLIST.2da entry
+  ~0x00004000        3~
+
+  // HLA table to use; see LUABBR.2da
+  ~Cl0~
+
+  // List of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
+  ~CHAN09 * HELM07 BAG26 RING06 RING31 * BOOT01 AMUL20 BRAC10 BELT06 *  *  * POTN52,5 POTN04,2 POTN14,5 HAMM07 * STAF08~
+
+  // Lower, mixed, and help kit names and descriptions, added to KITLIST.2da 
+  SAY ~talon of malar~
+  SAY ~Talon of Malar~
+  SAY ~TALON OF MALAR:  Malar, the god of hunters and evil lycanthropes, relishes in instilling fear and terror in his victims while tracking them down in an often long and bloody hunt.
+Malar teaches that only the fittest survive and the weak need to be winnowed from the folk, often through a brutal and bloody hunt.
+The exception to this are the young and the pregnant, which are supposed to be spared, so that there will always be prey to hunt.
+
+The church of Malar is loosely bound and without a central hierarchy. Local leaders, called Bloodmasters,
+decide the time and place for ceremonial hunts such as the High Hunt.
+Clerics of the Beastlord, who are referred to as Talons of Malar, seek to hunt as often as possible. They try to make their hunts dangerous to prey and hunter alike and, more often then not, try to ensure the hunt's bloody finale takes place in a settled area.
+
+Talons of Malar can only be of Chaotic Neutral, Neutral Evil and Chaotic Evil alignments.
+
+Abilities:
+- Beast Claws of Malar once per day
+This spell enables the caster to turn his hands into beast-like claws, which deal 1d4 slashing damage.
+For the duration of the spell (1 turn +1 turn/5 levels, up to a maximum of 4 turns at level 15), the caster gains 1 additional attack per round.
+As to for what they can hit, the claws are considered to be magical weapons +0 from level 1-9, +1 from level 10-14 and +2 from level 15 onward.
+-From level 5 can use the Tracking ability once per day
+-From level 10 can use the Hunter's Rage ability once per day
+Hunter's Rage lasts 5 rounds. For the duration of the effect, the caster becomes immune to fear and moral break and gains +2 THAC0 and deals additional 2 damage with each hit. However, enrage also gives a 2 point penalty to armor class and saving throws as well as a 33 percent chance to fail at spell casting.
+- From level 13 gains 1 additional attack per round~
+
+// Copy stuff over to override
+
+COPY ~TalonOfMalar/files/UBtln01.SPL~ ~override~
+  SAY NAME1~Beast Claws of Malar~ // unidentified name for items OR spell name
+  SAY UNIDENTIFIED_DESC ~Beast Claws of Malar (Transmutation) 
+Level: 2
+Sphere: Combat, Animal 
+Range: 0
+Duration: Special
+Casting Time: 2
+Area of Effect: Special
+Saving Throw: None 
+
+This spell enables the caster to turn his hands into beast-like claws, which deal 1d4 slashing damage.
+For the duration of the spell (1 turn +1 turn/5 levels, up to a maximum of 4 turns at level 15), the caster 
+gains 1 additional attack per round.
+As to for what they can hit, the claws are considered to be magical weapons +0 from level 1-9, +1 from level 10-14 and +2 from level 15 onward.~ // unidentified description for items, spell description for spells
+
+
+COPY ~TalonOfMalar/files/UBTLN02.ITM~ ~override~
+  SAY NAME1~Claw~ // unidentified name for items OR spell name
+  SAY NAME2 ~Claw~ // identified name for items; not used for spells
+  SAY UNIDENTIFIED_DESC ~Claw~ // unidentified description for items, spell description for spells
+  SAY DESC ~Claw~ // identified description for items, unused for spells
+
+COPY ~TalonOfMalar/files/UBTLN03.ITM~ ~override~
+  SAY NAME1~Claw~ // unidentified name for items OR spell name
+  SAY NAME2 ~Claw~ // identified name for items; not used for spells
+  SAY UNIDENTIFIED_DESC ~Claw~ // unidentified description for items, spell description for spells
+  SAY DESC ~Claw~ // identified description for items, unused for spells
+
+COPY ~TalonOfMalar/files/UBTLN04.ITM~ ~override~
+  SAY NAME1~Claw~ // unidentified name for items OR spell name
+  SAY NAME2 ~Claw~ // identified name for items; not used for spells
+  SAY UNIDENTIFIED_DESC ~Claw~ // unidentified description for items, spell description for spells
+  SAY DESC ~Claw~ // identified description for items, unused for spells
+
+COPY ~TalonOfMalar/files/UBTLN05.SPL~ ~override~
+  SAY NAME1~Tracking~ // unidentified name for items OR spell name
+  SAY UNIDENTIFIED_DESC ~Tracking
+With an intimate knowledge of his surroundings and the creatures that live within them, a Talon of Malar can use the Tracking ability to give himself a general idea of what creatures are in an area and which direction they are. Red arrows at the edge of the screen will point in the general direction of the creatures in the area.~ // unidentified description for items, spell description for spells
+
+COPY ~TalonOfMalar/files/UBTLN06.BAM~ ~override~
+
+COPY ~TalonOfMalar/files/UBTLN07.SPL~ ~override~
+
+COPY ~TalonOfMalar/files/UBTLN08.SPL~ ~override~
+  SAY NAME1~Hunter's Rage~ // unidentified name for items OR spell name
+  SAY UNIDENTIFIED_DESC ~Hunter's Rage lasts 5 rounds. For the duration of the effect, the caster becomes immune to fear and moral break and gains +2 THAC0 and deals additional 2 damage with each hit. However, enrage also gives a 2 point penalty to armor class and saving throws as well as a 33 percent chance to fail at spell casting. ~ // unidentified description for items, spell description for spells
+
+COPY ~TalonOfMalar/files/UBTLN09.SPL~ ~override~
+
+COPY ~TalonOfMalar/files/UBTLN10.ITM~ ~override~
+  SAY NAME1~Holy Symbol of Malar~ // unidentified name for items OR spell name
+  SAY NAME2 ~Holy Symbol of Malar~ // identified name for items; not used for spells
+  SAY UNIDENTIFIED_DESC ~Holy Symbol of Malar~ // unidentified description for items, spell description for spells
+  SAY DESC ~Ring of the Beastlord:
+Only those most worthy and devoted followers of Malar are granted these powerful holy symbols.
+
+STATISTICS:
+
+   Grants infravision while worn.
+   +1 to Luck while worn.
+   +1 to THAC0 while worn.
+
+Unusable By:
+All but Clerics
+Good Clerics
+Lawful Clerics
+Clerics Of Talos
+Clerics Of Helm
+~ // identified description for items, unused for spells
+
+COPY ~TalonOfMalar/files/UBTLN11.BAM~ ~override~
+
+// if DR > v3  is installed prior to my mod
+ACTION_IF ((FILE_EXISTS_IN_GAME ~cdnegpp.spl~) AND (FILE_EXISTS ~Divine_Remix/lib/macro_reindex_clab.tph~)) THEN BEGIN
+                  INCLUDE ~Divine_Remix/lib/extra_regexp_vars.tph~ 
+                  INCLUDE ~Divine_Remix/lib/macro_remove_blank_lines_from_eof.tph~
+                  INCLUDE ~Divine_Remix/lib/macro_reindex_clab.tph~
+                  INCLUDE ~Divine_Remix/lib/macro_spell_remove_evil.tph~
+                   COPY_EXISTING ~UBTLN00.2da~ ~override~
+                   LAUNCH_PATCH_MACRO ~remove_blank_lines_from_eof~ // this first, purge lines
+                   APPEND_FILE ~Divine_Remix/spheres/al_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/an_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/co_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/he_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/pl_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/sn_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/su_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/wa_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/we_major.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/di_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/ex_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/ea_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/ee_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/ef_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/ew_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/tr_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/pr_minor.2da~
+                   APPEND_FILE ~Divine_Remix/spheres/lastline.2da~
+                   LAUNCH_PATCH_MACRO ~spell_remove_evil~              
+                   LAUNCH_PATCH_MACRO ~reindex_clab~ // this last, re-index lines
+                   BUT_ONLY_IF_IT_CHANGES
+END
+                  
+                  

@@ -1,0 +1,13 @@
+Files:
+UBTLN00.2DA = CLABstyle File
+UBTLN01.SPL   = Beast Claws Spell
+UBTLN02.ITM = Claw level 1
+UBTLN03.ITM = Claw level 10
+UBTLN04.ITM = Claw level 15
+UBTLN05.SPL = Tracking Spell
+UBTLN06.BAM = Description Holy Symbol Bam
+UBTLN07.SPL = +1 attack per round
+UBTLN08.SPL = Aktive Enrage Spell
+UBTLN09.SPL = Give holy Symbol Spell
+UBTLN10.ITM = Holy Symbol
+UBTLN11.BAM = Inventory Holy Symbol Bam
